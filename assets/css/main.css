@@ -77,6 +77,12 @@ a:focus {
 
 /***** UTILITIES *****/
 
+.contact-icon {
+    font-size: 1.75rem; 
+    color: #2CF4F4; 
+    display: inline; 
+    margin: 1rem; 
+}
     /* Give blue color to any text */
 .blue {
     color: #2CF4F4; 
@@ -91,6 +97,7 @@ a:focus {
     color: #ebebeb;
     content: "\27a4 \0020";
 }
+
 
 /***** NAVBAR *****/
 
@@ -127,19 +134,27 @@ a:focus {
     left: 0;
     background-color: #cef2f8;
     visibility: hidden;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover:before {
     visibility: visible;
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
     /* UNDERLINE EFFECT WHEN ACTIVE */
 .navbar-custom .nav-item.active .nav-link:before {
     visibility: visible; 
-    transform: scaleX(1); 
+    -webkit-transform: scaleX(1); 
+        -ms-transform: scaleX(1); 
+            transform: scaleX(1); 
     content: "";
     position: absolute;
     width: 100%;
@@ -206,7 +221,8 @@ a:focus {
 .sidebar-photo {
     border-radius: 50%; 
     width: 100%; 
-    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); 
+            filter: grayscale(100%); 
 }
     /* SIDEBAR CONTENT */
 .sidebar-text {
@@ -235,7 +251,8 @@ a:focus {
         /* Div to contain overlay */
 .thumbnail-container {
     position: relative; 
-    box-shadow: 3px 3px 2px  rgb(34, 34, 34); 
+    -webkit-box-shadow: 3px 3px 2px  rgb(34, 34, 34); 
+            box-shadow: 3px 3px 2px  rgb(34, 34, 34); 
 }
 
 .thumbnail-container:hover {
@@ -243,17 +260,21 @@ a:focus {
 }
 
 .thumbnail-container:active {
-    box-shadow: none; 
+    -webkit-box-shadow: none;
+            box-shadow: none; 
 }
 
 .thumbnail-container:hover img{
     opacity: 0.4; 
-    filter: grayscale(100%) blur(1px) brightness(25%); 
+    -webkit-filter: grayscale(100%) blur(1px) brightness(25%); 
+            filter: grayscale(100%) blur(1px) brightness(25%); 
 }
 
         /* Overlay div */
 .thumbnail-container .overlay{
-    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+        -ms-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -262,8 +283,12 @@ a:focus {
 }
 
 .thumbnail-container:hover .overlay{
-    transform: translate(-50%, -50%) scale(1);
-    transition-duration: 0.1s; 
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition-duration: 0.1s;
+         -o-transition-duration: 0.1s;
+            transition-duration: 0.1s; 
 }
 
         /* Style overlay text */
@@ -308,7 +333,8 @@ a:focus {
     background: rgba(231, 230, 230, 0.2);
     padding: 0 0.37rem 0 0.37rem; 
     margin: 0.25rem; 
-    box-shadow: 1px 1px 1px  rgb(34, 34, 34);
+    -webkit-box-shadow: 1px 1px 1px  rgb(34, 34, 34); 
+            box-shadow: 1px 1px 1px  rgb(34, 34, 34);
 }
 
 .tags-menu li a {
@@ -329,7 +355,8 @@ a:focus {
     /* BOX ON TOP OF ARTICLES */
 .project-description {
     background: rgba(231, 230, 230, 0.2); 
-    box-shadow: 3px 3px 2px  rgb(34, 34, 34);
+    -webkit-box-shadow: 3px 3px 2px  rgb(34, 34, 34); 
+            box-shadow: 3px 3px 2px  rgb(34, 34, 34);
     padding: 1rem; 
 }
 
@@ -358,15 +385,19 @@ a:focus {
 .textwidget div.wpforms-container-full .wpforms-form .wpforms-field-label {
     font-size: 1rem; 
     font-weight: 400; 
-    color: #2CF4F4; 
 }
 
+.textwidget div.wpforms-container-full .wpforms-form .wpforms-required-label {
+    color: #2CF4F4; 
+}
 /***** SKILLS SECTION *****/
 
     /* SKILLS DESCRIPTIONS */
         /* Div with all skill names */
 .skill-name {
-    flex: 0 0 auto; 
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; 
 }
 
         /* Individual skill name */
@@ -382,7 +413,8 @@ a:focus {
     /* SKILLS MEASUREMENT */
         /* Div with all bars */
 .skill-bar {
-    flex-basis: 70%; 
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%; 
 }
 
         /* Individual skill bars */
@@ -476,9 +508,13 @@ a:focus {
     /* Call to action Buttons on articles */
 
 .cta-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
     width: 100%; 
-    justify-content: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
 }
 
 /***** MEDIA QUERIES *****/
