@@ -1,0 +1,611 @@
+/******* CONTENTS 
+    1. General Text Properties 
+    2. General Layout 
+    3. Utilities 
+    4. Navbar
+    5. Frontpage
+    6. Sidebar
+    7. Portfolio
+    8. Single Post
+    9. Contact Form
+    10. Skills Section
+    11. Buttons
+    12. Media Queries
+*******/
+
+html, body {
+    color: #ebebeb; 
+    font-family: 'Montserrat', sans-serif; 
+}
+body {
+    height: 100vh; 
+}
+
+/***** GENERAL TEXT PROPERTIES *****/
+
+h1, h2{
+    color: #2CF4F4; 
+    font-family: 'Catamaran', sans-serif;
+}
+h1{
+    margin-bottom: 2rem; 
+    font-size: 2.31rem; 
+}
+
+h2{
+    font-size: 1.75rem; 
+    font-weight: 400; 
+}
+
+h3{
+    font-size: 1.31rem; 
+    font-weight: 400; 
+}
+
+h4{
+    font-size: 1rem; 
+}
+
+a{
+    color: #2CF4F4; 
+}
+
+a:hover {
+    color: #bebebe;
+    text-decoration: none; 
+}
+
+a:focus {
+    outline: none;
+}
+
+/***** GENERAL LAYOUT *****/
+
+.main {
+    padding: 0 1rem 1rem 1rem; 
+}
+
+.left-content {
+    padding: 1rem; 
+    height: 100%; 
+}
+
+.right-content {
+    padding: 1rem; 
+    height: 90vh; 
+}
+
+/***** UTILITIES *****/
+
+    /* Give blue color to any text */
+.blue {
+    color: #2CF4F4; 
+}
+
+    /* Replace li bullets with arrows */
+.arrow-bullet {
+    list-style: none; 
+}
+
+.arrow-bullet li:before {
+    color: #ebebeb;
+    content: "\27a4 \0020";
+}
+
+/***** NAVBAR *****/
+
+    /* NAVBAR TEXT */
+.navbar-brand {
+    color: #ebebeb; 
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #ebebeb;
+    font-size: 1.31rem; 
+    font-family: 'Catamaran', sans serif;    
+    padding: 0; 
+    margin: 0.5rem; 
+    position: relative;
+    text-decoration: none; 
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #cef2f8; 
+}
+
+.navbar-custom .nav-item.active .nav-link{
+    color: #2CF4F4; 
+    position: relative;
+}
+    /* UNDERLINE ANIMATION ON HOVER */
+.navbar-expand-lg .navbar-nav .nav-link:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -0.3rem;
+    left: 0;
+    background-color: #cef2f8;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+    /* UNDERLINE EFFECT WHEN ACTIVE */
+.navbar-custom .nav-item.active .nav-link:before {
+    visibility: visible; 
+    transform: scaleX(1); 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -0.3rem;
+    left: 0;
+    background-color: #2CF4F4;
+}
+
+    /* HAMBURGER */
+.navbar-toggler-icon {
+    color: #ebebeb; 
+}
+
+/***** FRONTPAGE *****/
+
+    /* FRONTPAGE PHOTO */
+.photo-circle { 
+    max-width: 3em; 
+    float: right; 
+    margin: 0 0 0 1.31rem; 
+}
+
+.fp-photo { 
+    border-radius: 50%; 
+    width: 100%; 
+}
+
+    /* FRONTPAGE HEADLINES */
+#fp-tagline {
+    font-size: 2.31rem; 
+    font-weight: 700;
+}
+
+#fp-subheader {
+    font-size: 1.75rem; 
+    padding-bottom: 2.31rem; 
+    color: #ebebeb; 
+}
+
+#fp-quote {
+    text-align: center; 
+}
+
+    /* QUOTE ICONS */
+.fp-quote {
+    color: #2CF4F4; 
+    font-size: 1.31rem; 
+}
+
+/***** SIDEBAR *****/
+
+    /* WIDGET MARGIN */
+.widget-wrapper-2{
+    margin-top: 1.31rem; 
+}
+
+    /* SIDEBAR PHOTO */
+.photo-circle-small {
+    max-width: 7em; 
+    margin: auto; 
+}
+
+.sidebar-photo {
+    border-radius: 50%; 
+    width: 100%; 
+    filter: grayscale(100%); 
+}
+    /* SIDEBAR CONTENT */
+.sidebar-text {
+    text-align: center; 
+    padding: 0.5rem; 
+}
+
+    /* SIDEBAR ICONS */
+
+.icons-sidebar i{
+    font-size: 1.31rem; 
+    margin: 0.65rem; 
+    color: #2CF4F4; 
+}
+
+/***** PORTFOLIO *****/
+
+    /* REMOVE PADDING FROM COLUMNS */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+    /* CREATE OVERLAY ON HOVER */
+
+        /* Div to contain overlay */
+.thumbnail-container {
+    position: relative; 
+    box-shadow: 3px 3px 2px  rgb(34, 34, 34); 
+}
+
+.thumbnail-container:hover {
+    background-color: rgb(44, 244, 244, 0.8);
+}
+
+.thumbnail-container:active {
+    box-shadow: none; 
+}
+
+.thumbnail-container:hover img{
+    opacity: 0.4; 
+    filter: grayscale(100%) blur(1px) brightness(25%); 
+}
+
+        /* Overlay div */
+.thumbnail-container .overlay{
+    transform: translate(-50%, -50%) scale(0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center; 
+    padding: 0.75rem; 
+}
+
+.thumbnail-container:hover .overlay{
+    transform: translate(-50%, -50%) scale(1);
+    transition-duration: 0.1s; 
+}
+
+        /* Style overlay text */
+.overlay {
+    text-decoration: none; 
+    width: 95%; 
+    max-height: 100%; 
+    overflow: hidden; 
+    text-shadow: 0 0.4px rgb(58, 58, 58); 
+}
+
+.overlay p {
+    color: #ebebeb; 
+}
+
+.overlay h3{
+    color: #ebebeb; 
+    font-weight: 600; 
+    font-family: 'Catamaran';
+    font-size: 1.31rem; 
+}
+
+    /* CUSTOM FIELD FOR CREATION DATE */
+.post-meta {
+    list-style-type: none; 
+    padding: 0.1rem 0 0 0; 
+    font-size: 0.85rem; 
+    text-align: right;
+    font-style: italic; 
+}
+.post-meta li span{
+    display: none; 
+}
+
+    /* TAGS MENU */
+.tags-menu {
+    list-style-type: none; 
+}
+
+.tags-menu li {
+    display: inline-block; 
+    background: rgba(231, 230, 230, 0.2);
+    padding: 0 0.37rem 0 0.37rem; 
+    margin: 0.25rem; 
+    box-shadow: 1px 1px 1px  rgb(34, 34, 34);
+}
+
+.tags-menu li a {
+    font-size: 0.75rem; 
+}
+
+/***** SINGLE POST *****/
+    /* HEADER */
+.post-title {
+    margin-bottom: 1rem; 
+}
+
+.meta-info {
+    font-size: 0.9rem; 
+    margin: 0.5rem 0 0.5rem 0; 
+    font-style: italic; 
+}
+    /* BOX ON TOP OF ARTICLES */
+.project-description {
+    background: rgba(231, 230, 230, 0.2); 
+    box-shadow: 3px 3px 2px  rgb(34, 34, 34);
+    padding: 1rem; 
+}
+
+/***** CONTACT FORM *****/
+
+/* SUBMIT BUTTON */
+
+.textwidget div.wpforms-container-full .wpforms-form button[type="submit"]{
+    margin: 1rem 0 1rem 0;  
+    padding: 0.5rem; 
+    display: inline-block; 
+    border: solid #2CF4F4 1px; 
+    border-radius: 0; 
+    color: #ebebeb; 
+    background: transparent; 
+}
+
+.textwidget div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+    color: #c4c2c2; 
+    text-decoration: none; 
+    background: transparent; 
+    border: solid #2CF4F4 1px; 
+}
+
+    /* FORM LABELS */
+.textwidget div.wpforms-container-full .wpforms-form .wpforms-field-label {
+    font-size: 1rem; 
+    font-weight: 400; 
+    color: #2CF4F4; 
+}
+
+/***** SKILLS SECTION *****/
+
+    /* SKILLS DESCRIPTIONS */
+        /* Div with all skill names */
+.skill-name {
+    flex: 0 0 auto; 
+}
+
+        /* Individual skill name */
+.skill-name-item {
+    height: 1rem; 
+    margin: 0 1.5rem 0.75rem 0; 
+}
+
+.skill-name h4{
+    font-size: 1rem; 
+    padding: 0; 
+}
+    /* SKILLS MEASUREMENT */
+        /* Div with all bars */
+.skill-bar {
+    flex-basis: 70%; 
+}
+
+        /* Individual skill bars */
+.skill-bar div{
+    height: 1rem; 
+    margin: 0 0 0.7rem 0;  
+    padding: 0; 
+    background-color: #2CF4F4; 
+}
+
+        /* IDs for Frontpage skills*/
+#fp-skill-1{ /* HTML/CSS */
+    width: 90%; 
+}
+
+#fp-skill-2{ /* JS */
+    width: 90%; 
+}
+
+#fp-skill-3{ /* Wordpress */
+    width: 90%; 
+}
+
+        /* IDs for About page skills */
+            /* Web Development */
+#skill-1{ /* HTML/CSS */
+    width: 90%; 
+}
+
+#skill-2{ /* Bootstrap */
+    width: 50%; 
+}
+
+#skill-3{ /* Wordpress */
+    width: 50%; 
+}
+
+#skill-4{ /* JS */
+    width: 50%; 
+}
+
+#skill-5{ /* NodeJS*/
+    width: 50%; 
+}
+
+#skill-6{ /* MongoDB */
+    width: 50%; 
+}
+
+            /* Other Skills */
+#skill-7{
+    width: 50%; 
+}
+
+#skill-8{
+    width: 50%; 
+}
+
+#skill-9{
+    width: 50%; 
+}
+
+/***** BUTTONS *****/
+
+    /* Regular Button */
+.button {
+    margin: 1rem 1.31rem 1rem 0;  
+    padding: 0.5rem; 
+    display: inline-block; 
+    border: solid #2CF4F4 1px; 
+    border-radius: 0; 
+    color: #ebebeb; 
+}
+
+.button:hover {
+    color: #c4c2c2; 
+    text-decoration: none; 
+}
+
+    /* Black Button */
+.black-button {
+    margin: 0; 
+    border: solid #373737 1px;
+    color: #373737;
+}
+
+.black-button:hover {
+    color: #414141; 
+}
+
+    /* Call to action Buttons on articles */
+
+.cta-btns {
+    display: flex; 
+    width: 100%; 
+    justify-content: center; 
+}
+
+/***** MEDIA QUERIES *****/
+
+/* Small devices (landscape phones) */
+    @media(min-width:576px){}
+
+/* Medium Devices (tablets) */
+    @media(min-width:768px){
+        .main {
+            padding: 0 0 2.31rem 0; 
+        }
+        #fp-tagline {
+            font-size: 3.12rem; 
+        }
+
+        #fp-subheader {
+            font-size: 2.31em; 
+            padding-bottom: 2.31rem; 
+        }   
+        #fp-quote {
+            max-width: 60%; 
+            margin: auto; 
+        }    
+        .main-content {
+            margin-top: 2.31rem; 
+        }
+        .textwidget div.wpforms-container-full, div.wpforms-container-full .wpforms-form *{
+            margin-top: 3.12rem; 
+        }
+        .widget-wrapper-2 {
+            margin-top: 3.12em; 
+            margin-left: 1.31rem; 
+        }
+    }    
+
+/* Large devices (desktops) */
+    @media(min-width:992px){
+        .left-content {
+        padding: 3.12rem 1.31rem 0 3.75rem; 
+        }
+
+        .right-content {
+            padding: 3.12rem 3.75rem 0 1.31rem; 
+        }
+        h1{
+            font-size: 3.12rem; 
+        }
+
+        h2{
+            font-size: 2.31rem; 
+            color: #2CF4F4; 
+        }
+
+        h3{
+            font-size: 1.75rem; 
+        }
+
+        h4{
+            font-size: 1.31rem;
+            font-weight: 400; 
+        }  
+        .sidebar-text {
+            text-align: center; 
+            font-size: 0.9rem; 
+            padding: 1.31rem 2.31rem 1.31rem 2.31rem; 
+        }
+        .skill-name-item {
+            height: 1.31rem; 
+            margin: 0 1.5rem 1rem 0; 
+        }
+        .skill-bar div{
+            height: 1.31rem; 
+            margin: 0 0 1rem 0;  
+            padding: 0; 
+        }
+        .skill-name h4{
+            font-size: 1.31rem; 
+            padding: 0; 
+        }            
+    }
+/* Extra Large (large desktops) */
+    @media(min-width:1200px){
+        .skills h4 {
+            font-size: 1.31rem; 
+        }
+
+        .skill-bar {
+            height: 1.31rem; 
+        }
+
+        #fp-tagline {
+            font-size: 3.75rem; 
+        }
+
+        #fp-subheader {
+            padding-bottom: 3.12; 
+            font-size: 3.12; 
+        }        
+    }
+
+/* Huge (22" screens - custom query) */
+    @media(min-width:1500px){
+        .left-content {
+            padding: 3.75rem 2.31rem 0 7.5rem; 
+        }
+
+        .right-content {
+            padding: 3.75rem 7.5rem 0 2.31rem; 
+        }
+
+        .photo-circle {
+            max-width: 3.7em; 
+        }
+
+        .slider {
+            display: none; 
+        }    
+        .no-slider {
+            display: block; 
+        }
+
+        #fp-tagline {
+            font-size: 5.5rem; 
+        }
+
+        #fp-subheader {
+            font-size: 3.75rem; 
+        }
+    }
