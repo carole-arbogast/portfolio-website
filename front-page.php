@@ -11,7 +11,11 @@
                             <?php echo get_theme_mod('set_tagline') ?>
                         </h1>
                         <h2 id="fp-subheader"><?php echo get_theme_mod('set_subheader') ?></h2>
-                        <h3 id="fp-quote"><i class="fas fa-quote-left fp-quote"></i> This is a testimonial. Lorem ipsum dolor sit amet, his ea hinc referrentur voluptatibus. Nemore vocent his in. Cu graecis oportere pro, ea sit wisi rationibus ullamcorper. <i class="fas fa-quote-right fp-quote"></i></h3>
+                        <div id="fp-quote">
+                            <h3><i class="fas fa-quote-left fp-quote"></i> Carole has good human relation skills, is extremely organized, can work independently, and is able to follow through to ensure that the job gets done. <i class="fas fa-quote-right fp-quote"></i></h3>
+                            <p class="blockquote-footer">Johanna Hemminki, CEO & Founder of <a href="http://eliasrobot.com">Utelias Technologies</a></p>                            
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-4">

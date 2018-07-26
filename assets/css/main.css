@@ -98,7 +98,10 @@ a:focus {
     content: "\27a4 \0020";
 }
 
-
+.post-img-right {
+    margin: 0.75rem;
+    max-width: 76%; 
+}
 /***** NAVBAR *****/
 
     /* NAVBAR TEXT */
@@ -199,6 +202,10 @@ a:focus {
     text-align: center; 
 }
 
+#fp-quote p{
+    font-size: 1rem; 
+    color: #bebebe; 
+}
     /* QUOTE ICONS */
 .fp-quote {
     color: #2CF4F4; 
@@ -215,7 +222,7 @@ a:focus {
     /* SIDEBAR PHOTO */
 .photo-circle-small {
     max-width: 7em; 
-    margin: auto; 
+    margin: 0 0 0 2rem; 
 }
 
 .sidebar-photo {
@@ -427,29 +434,29 @@ a:focus {
 
         /* IDs for Frontpage skills*/
 #fp-skill-1{ /* HTML/CSS */
+    width: 100%; 
+}
+
+#fp-skill-2{ /* Wordpress */
     width: 90%; 
 }
 
-#fp-skill-2{ /* JS */
-    width: 90%; 
-}
-
-#fp-skill-3{ /* Wordpress */
-    width: 90%; 
+#fp-skill-3{ /* JS */
+    width: 75%; 
 }
 
         /* IDs for About page skills */
             /* Web Development */
 #skill-1{ /* HTML/CSS */
-    width: 90%; 
+    width: 100%; 
 }
 
 #skill-2{ /* Bootstrap */
-    width: 50%; 
+    width: 90%; 
 }
 
 #skill-3{ /* Wordpress */
-    width: 50%; 
+    width: 75%; 
 }
 
 #skill-4{ /* JS */
@@ -457,24 +464,24 @@ a:focus {
 }
 
 #skill-5{ /* NodeJS*/
-    width: 50%; 
+    width: 25%; 
 }
 
 #skill-6{ /* MongoDB */
-    width: 50%; 
+    width: 15%; 
 }
 
             /* Other Skills */
-#skill-7{
-    width: 50%; 
+#skill-7{ /* UX/UI */
+    width: 40%; 
 }
 
-#skill-8{
-    width: 50%; 
+#skill-8{ /* Git */
+    width: 35%; 
 }
 
-#skill-9{
-    width: 50%; 
+#skill-9{ /* SEO*/
+    width: 20%; 
 }
 
 /***** BUTTONS *****/
@@ -578,7 +585,7 @@ a:focus {
             font-weight: 400; 
         }  
         .sidebar-text {
-            text-align: center; 
+            text-align: left; 
             font-size: 0.9rem; 
             padding: 1.31rem 2.31rem 1.31rem 2.31rem; 
         }
@@ -628,13 +635,6 @@ a:focus {
 
         .photo-circle {
             max-width: 3.7em; 
-        }
-
-        .slider {
-            display: none; 
-        }    
-        .no-slider {
-            display: block; 
         }
 
         #fp-tagline {
